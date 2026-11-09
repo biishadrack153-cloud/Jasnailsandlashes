@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jas Nails and Lashes 3D</title>
+<style>
+:root{--bg:#f6f0ff;--surface:#fff;--ink:#24103a;--muted:#6b5a82;--accent:#7a2fd0;--gold:#b0592f;--soft:#ece1fb;--line:#dccdf2;--glow:rgba(122,47,208,.28);--b1:#e0457b;--b2:#7a2fd0;--btn-ink:#fff;--edge:#4b1a85;color-scheme:light;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13081f;--surface:#1f1030;--ink:#f8edf6;--muted:#bfa8d0;--accent:#c4a0ff;--gold:#f2c48d;--soft:#2a1741;--line:#3d2559;--glow:rgba(185,140,255,.4);--b1:#ff8fb8;--b2:#b98cff;--btn-ink:#1a0b2a;--edge:#7a52b8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#13081f;--surface:#1f1030;--ink:#f8edf6;--muted:#bfa8d0;--accent:#c4a0ff;--gold:#f2c48d;--soft:#2a1741;--line:#3d2559;--glow:rgba(185,140,255,.4);--b1:#ff8fb8;--b2:#b98cff;--btn-ink:#1a0b2a;--edge:#7a52b8;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.05;margin:0}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.hero{background:radial-gradient(70% 45% at 85% 8%,var(--glow),transparent),radial-gradient(60% 40% at 5% 75%,rgba(255,143,184,.22),transparent),var(--bg);padding:calc(env(safe-area-inset-top,0px) + 16px) 0 56px;overflow:hidden}
+header{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;font-weight:700;text-decoration:none}
+nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-size:.95rem}
+.welcome{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-size:1.7rem;color:var(--gold);margin:34px 0 0}
+.hero h1{font-size:clamp(3.2rem,15vw,5.4rem);margin:4px 0 14px}
+.sub{max-width:34ch;font-size:1.1rem;margin:0 0 26px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--b1),var(--b2));color:var(--btn-ink);border:0;border-radius:999px;padding:14px 26px;font:inherit;font-weight:800;text-decoration:none;cursor:pointer;text-align:center;box-shadow:0 6px 0 var(--edge),0 16px 26px -8px var(--glow);transition:transform .1s,box-shadow .1s}
+.btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--edge)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--accent);box-shadow:0 6px 0 var(--line)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.stage{perspective:900px;width:min(74vw,320px);margin:46px auto 0}
+.float{transform-style:preserve-3d;animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotateY(-12deg) rotateX(3deg)}50%{transform:translateY(-14px) rotateY(12deg) rotateX(-3deg)}}
+.t3{transform-style:preserve-3d;transition:transform .15s;position:relative;touch-action:pan-y}
+.t3 img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;border:4px solid var(--surface);box-shadow:0 30px 50px -18px rgba(0,0,0,.55),0 0 60px -10px var(--glow)}
+.chip{position:absolute;background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:.85rem;font-weight:800;box-shadow:0 14px 24px -8px rgba(0,0,0,.45)}
+.c1{left:-22px;top:26px;transform:translateZ(70px)}
+.c2{right:-18px;bottom:36px;transform:translateZ(90px)}
+.avail{text-align:center;margin:30px 0 0;color:var(--muted);font-size:.95rem}
+section{padding:52px 0;border-top:1px solid var(--line)}
+section h2{font-size:2.4rem;margin-bottom:20px;color:var(--accent)}
+.grp{font-size:1.7rem;margin:18px 0 12px}
+.cards{display:grid;gap:14px;perspective:900px}
+@media(min-width:620px){.cards{grid-template-columns:1fr 1fr}.row{grid-template-columns:1fr 1fr}}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px;display:grid;gap:4px;transform-style:preserve-3d;transition:transform .15s;box-shadow:0 18px 30px -16px var(--glow);touch-action:pan-y}
+.svc b{font-size:1.1rem;transform:translateZ(22px)}
+.svc small{color:var(--muted);transform:translateZ(12px)}
+.svc .price{font-weight:800;color:var(--gold);font-size:1.15rem;transform:translateZ(34px);justify-self:start}
+.note{background:var(--soft);border-radius:16px;padding:16px 18px;margin:20px 0 0}
+.ringwrap{height:340px;perspective:1100px;overflow:hidden;cursor:grab;touch-action:pan-y;user-select:none;margin:0 -20px}
+.ring{position:relative;width:190px;height:250px;margin:36px auto 0;transform-style:preserve-3d}
+.ring figure{position:absolute;inset:0;margin:0;backface-visibility:hidden;border-radius:18px;overflow:hidden;border:3px solid var(--surface);box-shadow:0 20px 34px -12px rgba(0,0,0,.55)}
+.ring img{width:100%;height:100%;object-fit:cover;display:block}
+.hint{text-align:center;color:var(--muted);font-size:.9rem;margin:6px 0 0}
+#lb{position:fixed;inset:0;background:rgba(10,4,18,.88);display:none;align-items:center;justify-content:center;z-index:20;padding:20px}
+#lb img{max-width:100%;max-height:88vh;border-radius:18px}
+form{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:14px;box-shadow:0 24px 40px -22px var(--glow)}
+label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;width:100%}
+.row{display:grid;gap:14px}
+.err{color:var(--accent);font-size:.9rem;min-height:1.2em;margin:0}
+#done{display:none;background:var(--soft);border-radius:22px;padding:24px}
+#done h3{font-size:1.9rem;margin-bottom:8px;color:var(--accent)}
+#sum{white-space:pre-line;color:var(--muted);margin:0 0 18px}
+footer{padding:36px 0 48px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+footer a{color:var(--accent);font-weight:700}
+@media (prefers-reduced-motion:reduce){.float{animation:none}}
+</style></head><body>
+<div class="hero" id="top"><div class="wrap">
+<header><a class="logo" href="#top">Jas</a><nav><a href="#services">Prices</a><a href="#work">Work</a><a href="#book">Book</a></nav></header>
+<p class="welcome">Welcome to</p>
+<h1>Jas Nails and Lashes</h1>
+<p class="sub">Gel nails, nail art, pedicures and lashes. Visit us in Litein or we come to you.</p>
+<div class="btns"><a class="btn" href="#book">Book an appointment</a><a class="btn alt" href="tel:+254740384064">Call 0740 384 064</a></div>
+<div class="stage"><div class="float"><div class="t3" data-tilt="14"><img src="hero.jpg" alt="Nude stiletto nails with gold heart designs"><span class="chip c1">Home visits</span><span class="chip c2">Litein</span></div></div></div>
+<p class="avail">By appointment · Home visits available</p>
+</div></div>
+
+<div class="wrap">
+<section id="services">
+<h2>Price list</h2>
+<h3 class="grp">Nails</h3>
+<div class="cards">
+<div class="svc" data-tilt><b>Gel + tips</b><small>Gel polish on nail tips</small><span class="price">KSh 700</span></div>
+<div class="svc" data-tilt><b>Builder + gel</b><small>Builder gel overlay with gel colour</small><span class="price">KSh 650</span></div>
+<div class="svc" data-tilt><b>Ombre gel</b><small>Soft gradient colour</small><span class="price">KSh 800</span></div>
+<div class="svc" data-tilt><b>Pedicure + gel</b><small>Pedicure finished with gel polish</small><span class="price">KSh 650</span></div>
+<div class="svc" data-tilt><b>Other nail services and nail art</b><small>Designs, charms, repairs and more</small><span class="price">Consult</span></div>
+</div>
+<h3 class="grp">Lashes</h3>
+<div class="cards">
+<div class="svc" data-tilt><b>Lash extensions</b><small>Full set of lashes</small><span class="price">KSh 500</span></div>
+</div>
+<p class="note"><b>We come to you.</b> Home visits for nails and lashes are available. Call or book and tell us where you are.</p>
+<p class="note">Prices can change with design and length. For anything not listed, we agree the price with you after a quick consultation.</p>
+</section>
+
+<section id="work"><h2>Our work</h2>
+<div class="ringwrap" id="rw"><div class="ring" id="ring">
+<figure><img src="photo1.jpg" alt="Nude stiletto nails with burgundy tips, hearts and flowers" draggable="false"></figure>
+<figure><img src="photo2.jpg" alt="Fluffy volume lash extensions" draggable="false"></figure>
+<figure><img src="photo3.jpg" alt="Red to black ombre gel nails" draggable="false"></figure>
+<figure><img src="photo4.jpg" alt="Brown stiletto nails with leopard print" draggable="false"></figure>
+<figure><img src="photo5.jpg" alt="Dramatic black lash extensions" draggable="false"></figure>
+<figure><img src="photo6.jpg" alt="Red French-tip stiletto nails with gold charms" draggable="false"></figure>
+<figure><img src="photo7.jpg" alt="Nude stiletto nails with gold heart outlines" draggable="false"></figure>
+<figure><img src="photo8.jpg" alt="Classic lash extensions" draggable="false"></figure>
+<figure><img src="photo9.jpg" alt="Almond nails with pink and red floral art" draggable="false"></figure>
+<figure><img src="photo10.jpg" alt="Deep red gel nails with a crystal accent" draggable="false"></figure>
+<figure><img src="photo11.jpg" alt="Pink and red cherry nail art" draggable="false"></figure>
+<figure><img src="photo12.jpg" alt="Pedicure with zebra-print French tips" draggable="false"></figure>
+</div></div>
+<p class="hint">Drag to spin. Tap a photo to enlarge.</p>
+</section>
+
+<section id="book">
+<h2>Book a visit</h2>
+<form id="f" novalidate>
+<div class="row">
+<label>Your name<input id="name" autocomplete="name"></label>
+<label>Phone<input id="phone" type="tel" autocomplete="tel"></label>
+</div>
+<label>Service<select id="service"><option>Nails: Gel + tips</option><option>Nails: Builder + gel</option><option>Nails: Ombre gel</option><option>Nails: Pedicure + gel</option><option>Nails: Other or nail art</option><option>Lashes</option></select></label>
+<label>Where<select id="where"><option>At the studio (Litein)</option><option>Home visit (we come to you)</option></select></label>
+<label>Your area or address (for home visits)<input id="addr" autocomplete="street-address"></label>
+<div class="row">
+<label>Date<input id="date" type="date"></label>
+<label>Time
+<select id="time"><option>9:00 am</option><option>10:00 am</option><option>11:00 am</option><option>12:00 pm</option><option>1:00 pm</option><option>2:00 pm</option><option>3:00 pm</option><option>4:00 pm</option><option>5:00 pm</option></select></label>
+</div>
+<label>Notes (optional)<textarea id="note" rows="3"></textarea></label>
+<p class="err" id="err" role="alert"></p>
+<button class="btn" type="submit">Send booking request</button>
+</form>
+<div id="done" role="status">
+<h3>Almost done</h3>
+<p id="sum"></p>
+<a class="btn" id="wa" href="#">Send on WhatsApp</a>
+</div>
+</section>
+
+<footer>
+<b>Jas Nails and Lashes</b> · @jasnailslitein1<br>
+Opposite Kenya Women, Litein<br>
+Call to book: <a href="tel:+254740384064">0740 384 064</a>
+</footer>
+</div>
+<div id="lb"><img alt=""></div>
+
+<script>
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('[data-tilt]').forEach(function(el){
+var m=parseFloat(el.getAttribute('data-tilt'))||10;
+el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform='rotateX('+(-y*m)+'deg) rotateY('+(x*m)+'deg)'});
+['pointerleave','pointerup','pointercancel'].forEach(function(n){el.addEventListener(n,function(){el.style.transform=''})});
+});
+var ring=document.getElementById('ring'),rw=document.getElementById('rw'),figs=ring.querySelectorAll('figure'),n=figs.length,R=Math.round(95/Math.tan(Math.PI/n)),a=0,drag=false,sx=0,moved=0;
+figs.forEach(function(f,i){f.style.transform='rotateY('+(i*360/n)+'deg) translateZ('+R+'px)'});
+function draw(){ring.style.transform='translateZ(-'+R+'px) rotateY('+a+'deg)'}
+function tick(){if(!drag&&!reduce)a+=.14;draw();requestAnimationFrame(tick)}
+draw();requestAnimationFrame(tick);
+rw.addEventListener('pointerdown',function(e){drag=true;sx=e.clientX;moved=0});
+window.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-sx;sx=e.clientX;moved+=Math.abs(dx);a+=dx*.4});
+window.addEventListener('pointerup',function(e){if(!drag)return;drag=false;if(moved<6){var f=e.target.closest&&e.target.closest('#ring figure');if(f){var lb=document.getElementById('lb');lb.querySelector('img').src=f.querySelector('img').src;lb.style.display='flex'}}});
+document.getElementById('lb').addEventListener('click',function(){this.style.display='none'});
+var f=document.getElementById('f'),err=document.getElementById('err');
+try{document.getElementById('date').min=new Date().toISOString().split('T')[0]}catch(e){}
+f.addEventListener('submit',function(e){
+e.preventDefault();
+var v=function(i){return document.getElementById(i).value.trim()};
+if(!v('name')||v('phone').length<6||!v('date')){err.textContent='Add your name, a phone number and a date to continue.';return}
+err.textContent='';
+var text='Hi Jas Nails and Lashes, I\u2019d like to book:\n'+v('service')+'\n'+v('where')+(v('addr')?' ('+v('addr')+')':'')+'\n'+v('date')+' at '+v('time')+'\nName: '+v('name')+'\nPhone: '+v('phone')+(v('note')?'\nNotes: '+v('note'):'');
+document.getElementById('sum').textContent=text;
+document.getElementById('wa').href='https://wa.me/254740384064?text='+encodeURIComponent(text);
+f.style.display='none';
+var dn=document.getElementById('done');dn.style.display='block';dn.scrollIntoView({block:'center'});
+});
+</script>
+</body></html>
